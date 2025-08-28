@@ -9,8 +9,11 @@ window.onload = function() {
 
 function addTask() {
   const taskInput = document.getElementById("taskInput");
+  const duedateInput = document.getElementById("dueDateInput");
   const taskText = taskInput.value.trim();
-  
+  const dueDate = duedateInput.value;
+  const tasklist = document.getElementById("taskList");
+
   if (taskText === "") {
     alert("Please enter a task!");
     return;

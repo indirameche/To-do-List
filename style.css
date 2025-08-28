@@ -5,17 +5,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  height: 90vh;
+  margin: 30;
 }
 
 /* Container */
 .todo-container {
   background: #fff;
-  padding: 30px 25px;
+  padding: 40px 40px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  width: 350px;
+  width: 600px; /* Increased width for a wider row */
+  max-width: 95vw;
   text-align: center;
 }
 
@@ -28,7 +29,6 @@ h2 {
 
 /* Input & Button */
 input {
-  width: 70%;
   padding: 10px 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -42,7 +42,7 @@ input:focus {
 .add-btn {
   padding: 10px 15px;
   margin-left: 8px;
-  background-color: #4caf50;
+  background-color: #8da3da;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -51,7 +51,7 @@ input:focus {
   transition: 0.3s;
 }
 .add-btn:hover {
-  background-color: #45a049;
+  background-color: #8da3da;
 }
 
 /* Task List */
@@ -118,4 +118,50 @@ ul::-webkit-scrollbar {
 ul::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 3px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#taskInput {
+  flex: 3;
+  min-width: 0;
+  max-width: none;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+#dueDateInput {
+  flex: 1.2;
+  min-width: 0;
+  font-size: 1em;
+  padding: 12px 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.add-btn, #addTaskButton {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 0;
+  background-color: #8da3da;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 1em;
+  height: 44px;
 }
